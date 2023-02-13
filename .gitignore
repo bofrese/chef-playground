@@ -1,0 +1,5 @@
+*.swp
+.chef
+.bash_history
+.sudo_*
+
