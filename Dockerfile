@@ -12,10 +12,12 @@ RUN apt-get update && \
     dpkg -i chef-workstation_21.10.640-1_amd64.deb
 
 # Install aditional packages
-RUN apt-get install -y sudo vim
-
-# Add the ChefDK bin directory to PATH
-ENV PATH="$PATH:/opt/chefdk/bin"
+RUN apt-get install -y sudo vim locales make
+# Set the locale
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 
 # Set the working directory to /chef
 WORKDIR /chef

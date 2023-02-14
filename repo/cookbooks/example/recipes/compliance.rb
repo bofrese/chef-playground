@@ -5,4 +5,3 @@ dangerous_services.each do |p|
     action :remove
   end
 end
-

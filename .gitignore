@@ -1,6 +1,8 @@
-*.swp
+*.bak
+*~
+*.sw[a-z]
 .chef
 .bash_history
 .sudo_*
 .viminfo
-
+.vscode
