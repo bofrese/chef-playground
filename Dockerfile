@@ -12,7 +12,7 @@ RUN apt-get update && \
     dpkg -i chef-workstation_21.10.640-1_amd64.deb
 
 # Install aditional packages
-RUN apt-get install -y sudo vim locales make
+RUN apt-get install -y sudo vim locales make docker.io
 # Set the locale
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8

@@ -9,7 +9,7 @@ build: ## Build the Docker image
 	docker build --platform linux/amd64 -t $(IMAGE_NAME) .
 
 run: build ## Run the Docker container
-	docker run --platform linux/amd64 --name $(CONTAINER_NAME) -v "$(PWD):/chef" -d $(IMAGE_NAME)
+	docker run --platform linux/amd64 --name $(CONTAINER_NAME) -v "$(PWD):/chef" -v /var/run/docker.sock:/var/run/docker.sock  -d $(IMAGE_NAME)
 
 connect: start ## Connect to the Docker container
 	docker exec -it $(CONTAINER_NAME) /bin/bash

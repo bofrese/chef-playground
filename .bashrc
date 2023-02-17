@@ -1,5 +1,7 @@
 echo "Running .bashrc ..."
 
+export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[31m\]playground\[\e[m\]:\[\e[33m\]\w\[\e[m\]\[\e[34m\]\\$\[\e[m\]  "
+
 export CHEF_LICENSE=accept-no-persist
 
 #eval "$(chef shell-init bash)" # This also outputs a warning, which when parsed by bash generates an error.
